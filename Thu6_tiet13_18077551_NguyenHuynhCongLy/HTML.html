@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script >
+        function DonGia() {
+            var t= document.getElementById ("kyhan").value;
+            if (t=="6thang") {
+                document.getElementById ("gia").value= 5000000;
+            } else if (t=="3thang") {
+                document.getElementById ("gia").value= 3000000;
+            } else document.getElementById ("gia").value= 8000000;
+        }
+    </script>
+</head>
+<body>
+    <div class="content-fluid" style="border: 1px solid black;">
+        <div class="row" style="border-bottom: 1px solid black;">
+            <div class="col-sm-12">
+                <h1> Tuoi Tre Online</h1>
+                <h1>Dang Ky Mua Bao Online</h1>
+            </div>
+        </div>
+        <div class="row">
+             <div class="col-sm-4" style="border: 1px solid black ;">
+                <h4>Left</h4>
+            </div>
+            <div class="col-sm-8">
+            <form class="form-group" id="frm">
+                <label>Dang ky bao</label>
+                <br>
+                <input type="checkbox" id="hangngay" value="Tuoi tre hang ngay"  name="" checked="true">tuoi tre hang ngay
+                 <input type="checkbox" id="cuoi" value="Tuoi tre hang ngay"> Tuoi tre cuoi
+                    <input type="checkbox" id="TUoi tre chu nhat" value="Tuoi tre hang ngay"> Tuoi tre chu nhat
+                    <br>
+                    <label>ky han</label>
+                    <br>
+                    <select class="form-control" id="kyhan" onclick="DonGia()">
+                        <option value="6thang">6 thang</option>
+                        <option value="3thang">3 thang</option>
+                        <option value="1thang">1 thang</option>
+
+                    </select>
+                    <br>
+                    <label>don gia</label>
+                    <br>
+                    <input id="gia" type="text" class="form-control" readonly="" name="">
+                    <label>thong tin lien lac</label>
+                    <br>
+                    <input type="text" id="thongtin" class="form-control" onblur="" name="">
+                    <br>
+
+                    <span id="er1">(*)</span>
+                    <br>
+                    <label>so dien thoai</label>
+                    <br>
+                    <input type="text" id="sdt" class="form-control" name="">
+                    <br>
+                    <span id="er2">(*)</span>
+                    <br>
+                    <label>dia chi nhan bao</label>
+                    <br>
+                    <input type="text" id="diachi" class="form-control" name="">
+                    <br>
+                    <span id="er3">(*)</span>
+                    <br>
+                    <label>hinh thuc thanh toan</label>
+                    <br>
+                    <input type="radio" id="chuyenkhoan" value="chyen khoan" name="">chuyen khoan
+                    <br>
+                    <input type="radio" id="tienmat" value="tien mat" name="">tien mat
+                    <br>
+            </form>
+            <button class="btn btn-primary" id="click" onclick="">dat bao</button>
+             <br>
+             <table class="table table-striped" >
+                 <thead>
+                     <tr>
+                         <td>STT</td>
+                         <td>Dat Bao</td>
+                         <td>Ky han</td>
+                         <td>Thong tin lien lac</td>
+                         <td>Dia chi nhan bao</td>
+                         <td>tong thanh tien</td>
+                         <td>hinh thuc thanh toan</td>
+
+                     </tr>
+                 </thead>
+             </table>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
